@@ -1,9 +1,9 @@
 ﻿# tablewll
 基于vue2.x的表格组件，支持自定义td内元素以及事件绑定、排序、分页（后台配合）、列宽度拖动变化、懒加载优化等
-### 安装
+## 安装
     npm install tablewll --save
-### 引用组件
-#### html引入
+## 引用组件
+### html引入
 
     <!-- 引入样式 -->
     <link rel="stylesheet" href="xxxx/tablewll/TableComponent.css">
@@ -11,7 +11,7 @@
     <!-- 引入js -->
     <script src="xxxx/tablewll/TableComponent.js"></script>
     
-#### 模块引入
+### 模块引入
 配合[webpack](https://webpack.js.org/)使用
 ```javascript
 
@@ -23,7 +23,7 @@ Vue.use(tablewll)
 
 ```
 
-### 使用示例
+## 使用示例
 ```javascript
 //html
 <div id="tableBox">
@@ -60,7 +60,7 @@ new Vue({
 })
 
 ```
-### Attributes
+## Attributes
 参数|说明|类型|可选值|默认值
 -|-|-|-|-
 table-data|显示的数据|array|-|-
@@ -69,7 +69,7 @@ get-data|分页跳转调用函数|function|-|-
 record-total|分页数据总数|number|-|0
 show-waitingicon|是否显示等待字样|boolean|-|false
 
-#### table-config options
+### table-config options
 Key|说明|类型|可选值|默认值
 -|-|-|-|-
 tableHeaders|表头配置|array|-|-
