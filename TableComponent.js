@@ -333,68 +333,28 @@ var HoverShow = {
 //表格组件开始
 var TableWll = {
     props:{
-        // tableHeaders:{
-        //     type:Array,
-        //     default:function(){
-        //         return []
-        //     }
-        // },
         tableData:{
             type:Array,
             default:function(){
                 return []
             }
         },
-        // pageable:{
-        //     type:Boolean,
-        //     default:false
-        // },
-        // showCheckbox:{
-        //     type:Boolean,
-        //     default:false
-        // },
         showWaitingicon:{
             type:Boolean,
             default:false
         },
-        // size:{
-        //     type:Number,
-        //     default:10
-        // },
         recordTotal:{
             type:Number,
             default:0
         },
         getData:{
         },
-        // widthControllable:{
-        //     type:Boolean,
-        //     default:false
-        // },
-        // sortable:{
-        //     type:Boolean,
-        //     default:false
-        // },
         tableConfig:{
             type:Object,
             default:function () {
                 return {}
             }
         }
-        // theadClass:{
-        //     type:String,
-        //     default:""
-        // },
-        // theadStyle:{
-        //     type:Object,
-        //     default:function () {
-        //         return {}
-        //     }
-        // },
-        // hovereventOpen:{
-        //     type:Boolean,
-        //     default:false
-        // }
     },
     data:function () {
         return{
@@ -410,7 +370,6 @@ var TableWll = {
             pageable:false,
             showCheckbox:false,
             checkboxWidth:'50px',
-            // showWaitingicon:false,
             size:10,
             widthControllable:false,
             sortable:false,
@@ -434,7 +393,11 @@ var TableWll = {
         tableList:function () {
             this.allSelectChecked = false;
             if(this.lazyload){
-              return this.lazyTableList;
+              if(this.lazyTableList.length < 1 && this.lazyIndex == 1){
+                return this.tableData.slice(0,this.lazySize);
+              }else{
+                return this.lazyTableList;
+              }
             }
             return this.tableData
         },
