@@ -1,9 +1,7 @@
 .table-containerAll{
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .table-container--paged{                                     /*表格父容器div样式有分页*/
@@ -29,7 +27,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 31px;
+  height: 32px;
   overflow: hidden;
 }
 
