@@ -67,7 +67,7 @@ table-data|显示的数据|array|-|-
 table-config|表格相关配置|object|-|-
 get-data|分页跳转调用函数|function|-|-
 record-total|分页数据总数|number|-|0
-showWaitingicon|是否显示等待字样|boolean|-|false
+show-waitingicon|是否显示等待字样|boolean|-|false
 
 
 
