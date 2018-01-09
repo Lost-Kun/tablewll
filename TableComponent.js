@@ -702,13 +702,9 @@ if (typeof window !== 'undefined' && window.Vue) {
     TableWllInstall(window.Vue)
 };
 
-//兼容es6和commonJs
+//模块导出
 if("object" == typeof exports && "object" == typeof module && "object" == typeof module.exports){
     module.exports = {
-        install: TableWllInstall
-    }
-}else{
-    export default {
         install: TableWllInstall
     }
 }
