@@ -1,0 +1,167 @@
+.table-containerAll{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+.table-container--paged{                                     /*表格父容器div样式有分页*/
+    position: absolute;
+    top:0;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    /*overflow:auto;*/
+}
+
+.table-container--nonpaged{                                     /*表格父容器div样式无分页*/
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*overflow:auto;*/
+}
+
+.table-header-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 31px;
+  overflow: hidden;
+}
+
+.table-body-container{
+  position: absolute;
+  top: 31px;
+  left:0;
+  right:0;
+  bottom: 0;
+  overflow-y:auto;
+}
+
+.table-class .table-scrollTh{
+  border-left-width: 0px;
+}
+
+.table-class{                                         /*表格样式*/
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/*.table-headTr{*/
+    /*background: rgba(2,156,255,0.5);                     !*表头背景色*!*/
+/*}*/
+
+.table-body-container .table-class tr:hover{
+    background: rgba(2,156,255,0.2);
+}
+
+.table-class td,.table-class th{
+    padding: 0;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: content-box;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.table-class th{
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-sortSign {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-image: url(table-sort.gif);
+    background-repeat: no-repeat;
+    background-position: 5px -112px;
+    position: absolute;
+    top:6px;
+    right:10px;
+    cursor: pointer;
+}
+
+.table-class td{
+    overflow: 	hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-paginationContainer{                         /*表格分页容器div样式*/
+    height: 30px;
+    position: absolute;
+    right: 0;
+    left:0;
+    bottom: 0;
+}
+
+.table-selectContainer{                              /*表格当前页下拉框容器div样式*/
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+}
+
+.table-selectStyle{                                  /*表格当前页下拉框样式*/
+    /*background:rgba(0,41,93,0.6);*/
+    border:1px solid rgb(50, 115, 222);
+    height: 18px;
+    color: #000;
+    padding-left: 10px;
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-skipButton{                                  /*表格跳转按钮样式*/
+    position: relative;
+    float: right;
+    padding: 2px 6px;
+    color: #ffffff;
+    text-decoration:none;
+    background-color: #26B;
+    border: 1px solid #014889;
+    margin-left:5px;
+}
+
+.table-skipPage{                                   /*表格跳转页文本框样式*/
+    /*background:rgba(0,41,93,0.6);*/
+    border:1px solid rgb(50, 115, 222);
+    height: 20px;
+    color: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left:5px;
+    padding-right:5px;
+    width: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-hoverShow{
+    width: 100%;
+    min-height: 30px;
+}
+
+.table-class  .table-hoverShow-th{
+    width: 120px;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.tableFade-enter-active, .tableFade-leave-active {
+    transition: opacity .3s
+}
+.tableFade-enter, .tableFade-leave-active {
+    opacity: 0
+}
