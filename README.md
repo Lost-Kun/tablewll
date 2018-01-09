@@ -24,6 +24,7 @@ Vue.use(tablewll)
 ```
 
 ## 使用示例
+1. 基本使用
 ```javascript
 //html
 <div id="tableBox">
@@ -60,6 +61,7 @@ new Vue({
 })
 
 ```
+2. 自定义td内元素
 ## Attributes
 参数|说明|类型|可选值|默认值
 -|-|-|-|-
