@@ -25,7 +25,7 @@
 
 //html
 <div id="tableBox">
-	<table-component :table-data="table_data" :table-config="table_config"></table-component>
+ <table-component :table-data="table_data" :table-config="table_config"></table-component>
 </div>
 
 //js
