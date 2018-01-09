@@ -69,6 +69,11 @@ get-data|分页跳转调用函数|function|-|-
 record-total|分页数据总数|number|-|0
 showWaitingicon|是否显示等待字样|boolean|-|false
 
+#### table-config options
+Key|说明|类型|可选值|默认值
+-|-|-|-|-
+tableHeaders|表头配置|array|-|-
+
 
 
 
