@@ -29,11 +29,11 @@
 
     //js
     new Vue({
-			el: '#tableBox',
+		  el: '#tableBox',
 			data:{
 				table_config:{
 					tableHeaders: [
-						{header: " 序号 ", dataIndex: "index", width:'50px'},
+						{header: "序号", dataIndex: "index", width:'50px'},
 						{header: "姓名", dataIndex: "name"},
 						{header: "年龄", dataIndex: "age"},
 						{header: "性别", dataIndex: "sex"}
@@ -55,6 +55,8 @@
 					]
 				}
     })
+
+#### 
 
 
 
