@@ -13,26 +13,29 @@
     
 #### 模块引入
 配合[webpack](https://webpack.js.org/)使用
+```javascript
 
-    import Vue from 'vue'
-    import tablewll from 'tablewll'
-    import 'tablewll/TableComponent.css'
+import Vue from 'vue'
+import tablewll from 'tablewll'
+import 'tablewll/TableComponent.css'
 
-    Vue.use(tablewll)
+Vue.use(tablewll)
+
+```
 
 ### 使用示例
 ```javascript
 //html
 <div id="tableBox">
-	<table-component :table-data="table_data" :table-config="table_config"></table-component>
+  <table-component :table-data="table_data" :table-config="table_config"></table-component>
 </div>
 
 //js
 new Vue({
 	el: '#tableBox',
 	data:{
-		table_config:{
-			tableHeaders: [
+	  table_config:{
+		  tableHeaders: [
 				{header: "序号", dataIndex: "index", width:'50px'},
 				{header: "姓名", dataIndex: "name"},
 				{header: "年龄", dataIndex: "age"},
@@ -40,20 +43,20 @@ new Vue({
 			]
 		},
 		table_data:[
-				{
-					index:1,
-					name:'小明',
-					age:'17',
-					sex:'男'
-				},
-				{
-					index:1,
-					name:'小红',
-					age:'14',
-					sex:'女'
-				}
-			]
-		}
+	    {
+        index:1,
+        name:'小明',
+        age:'17',
+        sex:'男'
+			},
+      {
+        index:1,
+        name:'小红',
+        age:'14',
+        sex:'女'
+      }
+		]
+	}
 })
 
 ```
