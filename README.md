@@ -21,41 +21,43 @@
     Vue.use(tablewll)
 
 ### 使用示例
+```
 
-    //html
-    <div id="tableBox">
-      <table-component :table-data="table_data" :table-config="table_config"></table-component>
-    </div>
+//html
+<div id="tableBox">
+	<table-component :table-data="table_data" :table-config="table_config"></table-component>
+</div>
 
-    //js
-    new Vue({
-		  el: '#tableBox',
-			data:{
-				table_config:{
-					tableHeaders: [
-						{header: "序号", dataIndex: "index", width:'50px'},
-						{header: "姓名", dataIndex: "name"},
-						{header: "年龄", dataIndex: "age"},
-						{header: "性别", dataIndex: "sex"}
-					]
+//js
+new Vue({
+	el: '#tableBox',
+	data:{
+		table_config:{
+			tableHeaders: [
+				{header: "序号", dataIndex: "index", width:'50px'},
+				{header: "姓名", dataIndex: "name"},
+				{header: "年龄", dataIndex: "age"},
+				{header: "性别", dataIndex: "sex"}
+			]
+		},
+		table_data:[
+				{
+					index:1,
+					name:'小明',
+					age:'17',
+					sex:'男'
 				},
-				table_data:[
-						{
-							index:1,
-							name:'小明',
-							age:'17',
-							sex:'男'
-						},
-						{
-							index:1,
-							name:'小红',
-							age:'14',
-							sex:'女'
-						}
-					]
+				{
+					index:1,
+					name:'小红',
+					age:'14',
+					sex:'女'
 				}
-    })
+			]
+		}
+})
 
+```
 #### 
 
 
