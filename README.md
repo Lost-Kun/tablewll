@@ -24,7 +24,7 @@ Vue.use(tablewll)
 ```
 
 ## 使用示例
-<br />
+
 1. **基础使用**
 
 * 效果图：
@@ -67,7 +67,7 @@ new Vue({
 })
 
 ```
-<br />
+
 2. **自定义td内元素**
 * 效果图：
 ![示例2](https://github.com/Lost-Kun/tablewll/blob/master/images/demo2.png)
