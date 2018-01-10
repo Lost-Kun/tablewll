@@ -413,7 +413,7 @@ T_class|元素class|string/array|-|-
 T_style|元素style|object/array|-|-
 T_attrs|元素的html特性，如：id|object/array|-|-
 T_domProps|元素DOM属性，如：innerHTML|object/array|-|-
-T_events|元素的监听事件，如：click、mouseover|object/array；参数依次为e,tdData,trData,tbData|-|-
+T_events|元素的监听事件，如：click、mouseover；参数依次为e,tdData,trData,tbData|object/array|-|-
 
 ### table-config options
 Key|说明|类型|可选值|默认值
