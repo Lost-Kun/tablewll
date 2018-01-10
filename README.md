@@ -1,5 +1,5 @@
 ﻿# tablewll
-基于vue2.x的表格组件，支持自定义td内元素、事件绑定、排序、分页（后台配合）、列宽度拖动变化、懒加载优化等功能
+基于vue2.x的表格组件，支持自定义td内元素、事件绑定、排序、分页（后台配合）、列宽度拖动变化、行悬浮显示隐藏、懒加载优化等功能
                                                                      
 ![演示](https://github.com/Lost-Kun/tablewll/blob/master/images/demo.gif)
 
