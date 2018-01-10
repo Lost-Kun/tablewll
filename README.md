@@ -3,6 +3,8 @@
                                                                      
 ![演示](https://github.com/Lost-Kun/tablewll/blob/master/images/demo.gif)
 
+[TOC]
+
 ## 安装
     npm install tablewll --save
 ## 引用组件
