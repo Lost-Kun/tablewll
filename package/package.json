@@ -1,6 +1,6 @@
 {
   "name": "tablewll",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "表格组件",
   "main": "TableComponent.js",
   "scripts": {
