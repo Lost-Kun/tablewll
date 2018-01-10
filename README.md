@@ -77,6 +77,11 @@ new Vue({
 
 * 代码：
 ```javascript
+/** html */
+<div id="tableBox">
+  <table-component :table-data="table_data" :table-config="table_config" ></table-component>
+</div>
+
 /** js */
 new Vue({
 	el: '#tableBox',
@@ -157,6 +162,10 @@ new Vue({
 
 * 代码：
 ```javascript
+/** html */
+<div id="tableBox">
+  <table-component :table-data="table_data" :table-config="table_config" ></table-component>
+</div>
 
 /** js */
 new Vue({
@@ -319,6 +328,68 @@ new Vue({
              * 请求接口获取数据，重新赋值table_data
              */
         }
+    }
+})
+
+```
+
+### 6. 行悬浮显示
+
+* 效果图：
+![示例6](https://github.com/Lost-Kun/tablewll/blob/master/images/demo6.png)
+
+* 代码：
+```javascript
+/** html */
+<div id="tableBox">
+  <table-component :table-data="table_data" :table-config="table_config" ></table-component>
+</div>
+
+/** js */
+new Vue({
+	el: '#tableBox',
+	data:{
+		table_config:{
+			tableHeaders: [
+				{header: "序号", dataIndex: "index"},
+				{header: "姓名", dataIndex: "name"},
+				{header: "年龄", dataIndex: "age"},
+				{header: "性别", dataIndex: "sex"}
+			],
+			hovereventOpen:true, //是否使用行悬浮显示，默认false
+			hovereventOpenWidth:'100px', //悬浮区域宽度
+			hovereventConfig:{//悬浮区域显示内容，配置项和td自定义元素相同
+				T_type:'button',
+				T_value:['详情','删除'],
+				T_style:{
+					margin:'auto 5px'
+				},
+				T_events:[//多元素，使用数组
+					{
+						click:function(e, tdData, trData, tbData){
+							alert(JSON.stringify(trData))
+						}
+					},
+					{
+
+					}
+				]
+			}
+		},
+		table_data:[
+			{
+				index:1,
+				name:'小明',
+				age:'17',
+				sex:'男'
+			},
+			{
+				index:2,
+				name:'小红',
+				age:'14',
+				sex:'女'
+			}
+        ]
     }
 })
 

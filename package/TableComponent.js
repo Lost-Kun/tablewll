@@ -289,20 +289,39 @@ var HoverShow = {
         var self=this;
         var vNodes="";
         if(this.hoverConfig!=={}){
-            if(this.hoverConfig.T_nodeNumber&&typeof this.hoverConfig.T_nodeNumber=='number'){
-                vNodes=Array.apply(null,{length:this.hoverConfig.T_nodeNumber}).map(function (value,index) {
+            // if((this.hoverConfig.T_nodeNumber&&typeof this.hoverConfig.T_nodeNumber=='number') || (this.hoverConfig.)){
+                var nodeLength = 0;
+                if(this.hoverConfig.T_nodeNumber&&typeof this.hoverConfig.T_nodeNumber=='number'){
+                    nodeLength = this.hoverConfig.T_nodeNumber;
+                }else if(self.hoverConfig.hasOwnProperty('T_value')){
+                    if(Object.prototype.toString.call(self.hoverConfig.T_value) === '[object Array]'){
+                        nodeLength = self.hoverConfig.T_value.length
+                    }else{
+                        nodeLength = 1
+                    }
+                }
+                vNodes=Array.apply(null,{length:nodeLength}).map(function (value,index) {
+                    var nodeText = "";
+                    if(self.hoverConfig.hasOwnProperty('T_value')){
+                        if(Object.prototype.toString.call(self.hoverConfig.T_value) === '[object Array]'){
+                            nodeText = self.hoverConfig.T_value.length > index ? self.hoverConfig.T_value[index] : self.hoverConfig.T_value.slice(-1)[0]
+                        }else if(self.hoverConfig.T_value !== null && self.hoverConfig.T_value !== undefined){
+                            nodeText = self.hoverConfig.T_value
+                        }
+                    }
                     return creatElement(
-                        Object.prototype.toString.call(self.hoverConfig.T_type) === '[object Array]'?self.hoverConfig.T_type[index]:self.hoverConfig.T_type,
+                        Object.prototype.toString.call(self.hoverConfig.T_type) === '[object Array]'?(self.hoverConfig.T_type[index] || self.hoverConfig.T_type.slice(-1)[0]):self.hoverConfig.T_type,
                         {
                             'class':Object.prototype.toString.call(self.hoverConfig.T_class) === '[object Array]'?self.hoverConfig.T_class[index]:(self.hoverConfig.T_class||{}),
                             style:Object.prototype.toString.call(self.hoverConfig.T_style) === '[object Array]'?self.hoverConfig.T_style[index]:(self.hoverConfig.T_style||{}),
                             attrs:Object.prototype.toString.call(self.hoverConfig.T_attrs) === '[object Array]'?self.hoverConfig.T_attrs[index]:(self.hoverConfig.T_attrs||{}),
                             domProps:Object.prototype.toString.call(self.hoverConfig.T_domProps) === '[object Array]'?self.hoverConfig.T_domProps[index]:(self.hoverConfig.T_domProps||{}),
                             on:Object.prototype.toString.call(self.hoverConfig.T_events) === '[object Array]'?self.EventFactory(self.hoverConfig.T_events[index]):(self.hoverConfig.T_events?self.EventFactory(self.hoverConfig.T_events):{})
-                        }
+                        },
+                        nodeText
                     )
                 })
-            }
+            // }
         }
         return creatElement(
             'div',
