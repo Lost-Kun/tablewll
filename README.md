@@ -207,6 +207,65 @@ new Vue({
 
 ```
 
+### 4. 分页
+
+* 效果图：
+![示例4](https://github.com/Lost-Kun/tablewll/blob/master/images/demo4.png)
+
+* 代码：
+```javascript
+/** html */
+<div id="tableBox">
+  <table-component :table-data="table_data" :table-config="table_config" :record-total="total_number" :get-data="getData" ></table-component>
+</div>
+
+/** js */
+new Vue({
+	el: '#tableBox',
+	data:{
+		table_config:{
+			tableHeaders: [
+				{header: "序号", dataIndex: "index"},
+				{header: "姓名", dataIndex: "name"},
+				{header: "年龄", dataIndex: "age"},
+				{header: "性别", dataIndex: "sex"}
+            ],
+            pageable: true, //是否分页，默认false
+            size: 10 //每页展示条数，默认10
+		},
+		table_data:[
+			{
+				index:1,
+				name:'小明',
+				age:'17',
+				sex:'男'
+			},
+			{
+				index:2,
+				name:'小红',
+				age:'14',
+				sex:'女'
+			}
+        ],
+        total_number:20 //传入总数据量
+    },
+    methods:{
+        /**
+         * 分页跳转调用函数
+         * 
+         * @param {number} curPage 当前页
+         * @param {size} size 每页显示条数
+         */
+        getData:function(curPage, size){
+            /**
+             * 请求接口获取数据，重新赋值table_data
+             */
+        }
+    }
+})
+
+```
+
 ## Attributes
 参数|说明|类型|可选值|默认值
 -|-|-|-|-
