@@ -408,12 +408,12 @@ show-waitingicon|是否显示等待字样|boolean|-|false
 Key|说明|类型|可选值|默认值
 -|-|-|-|-
 T_type|自定义html元素类型，如：input、select、img等|string|-|-
-T_value|表单元素为绑定值,一般为innerText;类型为array时，通过数组长度确定元素个数|string\array|-|-
-T_class|元素class|string\array|-|-
-T_style|元素style|object\array|-|-
-T_attrs|元素的html特性，如：id|object\array|-|-
-T_domProps|元素DOM属性，如：innerHTML|object\array|-|-
-T_events|元素的监听事件，如：click、mouseover|object\array|-|-
+T_value|表单元素为绑定值,一般为innerText;类型为array时，通过数组长度确定元素个数|string/array|-|-
+T_class|元素class|string/array|-|-
+T_style|元素style|object/array|-|-
+T_attrs|元素的html特性，如：id|object/array|-|-
+T_domProps|元素DOM属性，如：innerHTML|object/array|-|-
+T_events|元素的监听事件，如：click、mouseover|object/array|-|-
 
 ### table-config options
 Key|说明|类型|可选值|默认值
