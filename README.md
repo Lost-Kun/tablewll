@@ -64,7 +64,7 @@ new Vue({
 2. 自定义td内元素
 ## Attributes
 参数|说明|类型|可选值|默认值
---------|--------|--------|--------|--------
+-|-|-|-|-
 table-data|显示的数据|array|-|-
 table-config|表格相关配置|object|-|-
 get-data|分页跳转调用函数|function|-|-
