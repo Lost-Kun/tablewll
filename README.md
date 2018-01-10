@@ -33,7 +33,7 @@ Vue.use(tablewll)
 
 //js
 new Vue({
-  el: '#tableBox',
+	el: '#tableBox',
 	data:{
 		table_config:{
 			tableHeaders: [
