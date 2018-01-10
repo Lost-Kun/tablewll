@@ -168,13 +168,10 @@ new Vue({
 				{
 					header: "操作",
 					T_type:'button',
-                    T_value:[//多元素，使用数组
-						'详情',
-						'删除'
-					],
-                    T_style:{
-                        margin:'auto 5px'
-                    },
+                    			T_value:['详情', '删除'],//多元素，使用数组
+                    			T_style:{
+                        			margin:'auto 5px'
+                    			},
 					T_events:[//多元素，使用数组
 						{
 							click:function(e, tdData, trData, tbData){
