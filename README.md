@@ -251,12 +251,70 @@ new Vue({
     },
     methods:{
         /**
-         * 分页跳转调用函数
+         * 分页排序调用函数
          * 
          * @param {number} curPage 当前页
-         * @param {size} size 每页显示条数
+         * @param {number} size 每页显示条数
          */
         getData:function(curPage, size){
+            /**
+             * 请求接口获取数据，重新赋值table_data
+             */
+        }
+    }
+})
+
+```
+
+### 5. 排序
+
+* 效果图：
+![示例5](https://github.com/Lost-Kun/tablewll/blob/master/images/demo5.png)
+
+* 代码：
+```javascript
+/** html */
+<div id="tableBox">
+  <table-component :table-data="table_data" :table-config="table_config" :get-data="getData" ></table-component>
+</div>
+
+/** js */
+new Vue({
+	el: '#tableBox',
+	data:{
+		table_config:{
+			tableHeaders: [
+				{header: "序号", dataIndex: "index", sortable: true}, //sortable为true，则该列可排序
+				{header: "姓名", dataIndex: "name"},
+				{header: "年龄", dataIndex: "age", sortable: true},
+				{header: "性别", dataIndex: "sex"}
+			]
+		},
+		table_data:[
+			{
+				index:1,
+				name:'小明',
+				age:'17',
+				sex:'男'
+			},
+			{
+				index:2,
+				name:'小红',
+				age:'14',
+				sex:'女'
+			}
+        ]
+    },
+    methods:{
+        /**
+         * 分页排序调用函数
+         * 
+         * @param {number} curPage 当前页
+         * @param {number} size 每页显示条数
+         * @param {string} dataIndex 选中的排序字段
+         * @param {number} orderType 排序方式，0：降序，1：升序
+         */
+        getData:function(curPage, size, dataIndex, orderType){
             /**
              * 请求接口获取数据，重新赋值table_data
              */
@@ -271,7 +329,7 @@ new Vue({
 -|-|-|-|-
 table-data|显示的数据|array|-|-
 table-config|表格相关配置|object|-|-
-get-data|分页跳转调用函数|function|-|-
+get-data|分页排序调用函数|function|-|-
 record-total|分页数据总数|number|-|0
 show-waitingicon|是否显示等待字样|boolean|-|false
 
