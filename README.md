@@ -147,7 +147,7 @@ new Vue({
 })
 ```
 
-1. **添加操作列**
+3. **添加操作列**
 
 * 效果图：
 ![示例3](https://github.com/Lost-Kun/tablewll/blob/master/images/demo3.png)
@@ -168,7 +168,10 @@ new Vue({
 				{
 					header: "操作",
 					T_type:'button',
-                    T_value:['详情','删除'],//多元素，使用数组
+                    T_value:[//多元素，使用数组
+						'详情',
+						'删除'
+					],
                     T_style:{
                         margin:'auto 5px'
                     },
