@@ -1,5 +1,6 @@
 ﻿# tablewll
 基于vue2.x的表格组件，支持自定义td内元素以及事件绑定、排序、分页（后台配合）、列宽度拖动变化、懒加载优化等
+<br />
 ![演示](https://github.com/Lost-Kun/tablewll/blob/master/images/demo.gif)
 ## 安装
     npm install tablewll --save
