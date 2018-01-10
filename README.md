@@ -81,6 +81,7 @@ new Vue({
 				{header: "序号", dataIndex: "index"},
 				{header: "姓名", dataIndex: "name"},
 				{header: "年龄", dataIndex: "age"},
+				{header: "性别", dataIndex: "sex"},
 				{header: "性别", dataIndex: "sex"}
 			]
 		},
@@ -122,7 +123,7 @@ new Vue({
 				age:'14',
 				sex:{
 					T_type:'select',
-					T_value:[
+					T_value:[//select值比较特殊，需嵌套数组
 						[
 							{
 								value:0,
