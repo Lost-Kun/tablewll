@@ -57,7 +57,7 @@ new Vue({
 				sex:'男'
 			},
 			{
-				index:1,
+				index:2,
 				name:'小红',
 				age:'14',
 				sex:'女'
@@ -119,7 +119,7 @@ new Vue({
 				sex:'男'
 			},
 			{
-				index:1,
+				index:2,
 				name:'小红',
 				age:'14',
 				sex:{
@@ -196,7 +196,7 @@ new Vue({
 				sex:'男'
 			},
 			{
-				index:1,
+				index:2,
 				name:'小红',
 				age:'14',
 				sex:'女'
