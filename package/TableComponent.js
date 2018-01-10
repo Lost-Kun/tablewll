@@ -372,7 +372,6 @@ var TableWll = {
             checkboxWidth:'50px',
             size:10,
             widthControllable:false,
-            sortable:false,
             theadClass:"",
             theadStyle:{},
             hovereventOpen:false,
@@ -616,7 +615,7 @@ var TableWll = {
         },
         configChangeFn:function () {
             if(this.tableConfig!={}){
-                var configArr=["tableHeaders","pageable","showCheckbox","size","widthControllable","sortable","theadClass","theadStyle","hovereventOpen","hovereventConfig","trClickEvent","lazyload","lazySize","checkboxWidth","hovereventOpenWidth"];
+                var configArr=["tableHeaders","pageable","showCheckbox","size","widthControllable","theadClass","theadStyle","hovereventOpen","hovereventConfig","trClickEvent","lazyload","lazySize","checkboxWidth","hovereventOpenWidth"];
                 for(var i=0;i<configArr.length;i++){
                     if(configArr[i] in this.tableConfig){
                         this[configArr[i]]=this.tableConfig[configArr[i]];
