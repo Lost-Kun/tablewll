@@ -229,9 +229,9 @@ new Vue({
 				{header: "姓名", dataIndex: "name"},
 				{header: "年龄", dataIndex: "age"},
 				{header: "性别", dataIndex: "sex"}
-            ],
-            pageable: true, //是否分页，默认false
-            size: 10 //每页展示条数，默认10
+            		],
+            		pageable: true, //是否分页，默认false
+            		size: 10 //每页展示条数，默认10
 		},
 		table_data:[
 			{
