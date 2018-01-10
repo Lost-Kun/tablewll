@@ -468,7 +468,7 @@ new Vue({
 				{header: "年龄", dataIndex: "age"},
 				{header: "性别", dataIndex: "sex"}
 			],
-			showCheckbox:true
+			showCheckbox:true//是否显示复选框
 		},
 		table_data:[
 			{
