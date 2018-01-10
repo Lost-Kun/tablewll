@@ -24,25 +24,25 @@ Vue.use(tablewll)
 ```
 
 ## 使用示例
-1. 基本使用
+1. 基础使用
 
-* 效果图
+* 效果图：
 ![示例1](https://github.com/Lost-Kun/tablewll/blob/master/images/demo1.png)
 
-* 代码
+* 代码：
 ```javascript
-//html
+/** html */
 <div id="tableBox">
   <table-component :table-data="table_data" :table-config="table_config"></table-component>
 </div>
 
-//js
+/** js */
 new Vue({
 	el: '#tableBox',
 	data:{
 		table_config:{
 			tableHeaders: [
-				{header: "序号", dataIndex: "index", width:'50px'},
+				{header: "序号", dataIndex: "index", width:'50px'}, //width设置列宽
 				{header: "姓名", dataIndex: "name"},
 				{header: "年龄", dataIndex: "age"},
 				{header: "性别", dataIndex: "sex"}
@@ -67,6 +67,84 @@ new Vue({
 
 ```
 2. 自定义td内元素
+* 效果图：
+![示例2](https://github.com/Lost-Kun/tablewll/blob/master/images/demo2.png)
+
+* 代码：
+```javascript
+/** js */
+new Vue({
+	el: '#tableBox',
+	data:{
+		table_config:{
+			tableHeaders: [
+				{header: "序号", dataIndex: "index"},
+				{header: "姓名", dataIndex: "name"},
+				{header: "年龄", dataIndex: "age"},
+				{header: "性别", dataIndex: "sex"}
+			]
+		},
+		table_data:[
+			{
+				index:1,
+				name:'小明',
+				age:{
+					//自定义html元素类型
+					T_type:'input',
+					//表单元素绑定值
+					T_value:'17',
+					//指定元素class
+					T_class:'',
+					//指定元素style
+					T_style:{
+						width:'100px'
+					},
+					//正常的 html 特性
+					T_attrs:{
+						id: 'foo'
+					},
+					// DOM 属性
+					T_domProps:{
+						innerHTML: ''
+					},
+					//事件监听器
+					T_events:{
+						change:function(e, tdData, trData, tbData){
+							alert(tdData.T_value)
+						}
+					}
+				},
+				sex:'男'
+			},
+			{
+				index:1,
+				name:'小红',
+				age:'14',
+				sex:{
+					T_type:'select',
+					T_value:[
+						[
+							{
+								value:0,
+								text:'男'
+							},
+							{
+								value:1,
+								text:'女',
+								selected:true
+							}
+						]
+					],
+					T_style:{
+						width:'100px'
+					}
+				}
+			}
+		]
+	}
+})
+```
+
 ## Attributes
 参数|说明|类型|可选值|默认值
 -|-|-|-|-

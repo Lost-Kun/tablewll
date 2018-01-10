@@ -79,7 +79,7 @@ var TDComponent = {
                     })()]
                 }else if(Object.prototype.toString.call(tdSource.T_value) === '[object Array]'&&Object.prototype.toString.call(tdSource.T_value[0]) !== '[object object]'){
                     return Array.apply(null,{length:tdSource.T_value.length}).map(function (value, index) {
-                        var elementType=Object.prototype.toString.call(tdSource.T_type) === '[object Array]'?tdSource.T_type[index]:tdSource.T_type;
+                        var elementType=Object.prototype.toString.call(tdSource.T_type) === '[object Array]'?(tdSource.T_type[index] || tdSource.T_type.slice(-1)[0]):tdSource.T_type;
                         if(elementType=="input"||elementType=="textarea"){
                             return createElement(
                                 elementType,
