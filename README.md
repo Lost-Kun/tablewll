@@ -408,6 +408,20 @@ show-waitingicon|是否显示等待字样|boolean|-|false
 Key|说明|类型|可选值|默认值
 -|-|-|-|-
 tableHeaders|表头配置|array|-|-
+pageable|是否分页|boolean|-|false
+size|分页时每页显示条数|number|-|10
+showCheckbox|是否显示复选框|boolean|-|false
+checkboxWidth|复选框列宽度|string|-|50px
+widthControllable|列宽是否可拖动改变|boolean|-|false
+theadClass|表头Class|string|-|-
+theadStyle|表头style|object|-|-
+trClickEvent|表格内容tr点击事件触发方法|function|-|-
+hovereventOpen|是否使用行悬浮显示|boolean|-|false
+hovereventOpenWidth|悬浮区域宽度|string|-|120px
+hovereventConfig|悬浮区域显示内容配置，参考td自定义元素|object|-|-
+lazyload|是否启用懒加载|boolean|-|true
+lazySize|懒加载每加载一次显示条数|number|-|40
+
 
 
 
