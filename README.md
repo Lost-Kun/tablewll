@@ -28,7 +28,7 @@ Vue.use(tablewll)
 
 ## 使用示例
 
-### 基础使用
+#### 1.基础使用
 
 * 效果图：
 ![示例1](https://github.com/Lost-Kun/tablewll/blob/master/images/demo1.png)
@@ -71,7 +71,7 @@ new Vue({
 
 ```
 
-### 自定义td内元素
+#### 2.自定义td内元素
 * 效果图：
 ![示例2](https://github.com/Lost-Kun/tablewll/blob/master/images/demo2.png)
 
@@ -150,7 +150,7 @@ new Vue({
 })
 ```
 
-3. **添加操作列**
+#### 3.添加操作列
 
 * 效果图：
 ![示例3](https://github.com/Lost-Kun/tablewll/blob/master/images/demo3.png)
