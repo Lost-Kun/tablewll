@@ -408,7 +408,7 @@ show-waitingicon|是否显示等待字样|boolean|-|false
 Key|说明|类型|可选值|默认值
 -|-|-|-|-
 tr_class|表格每行class|string|-|-
-tr_style|表格每行style|string|-|-
+tr_style|表格每行style|object|-|-
 
 #### td自定义元素 options
 Key|说明|类型|可选值|默认值
