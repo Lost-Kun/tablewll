@@ -404,7 +404,13 @@ get-data|分页排序调用函数|function|-|-
 record-total|分页数据总数|number|-|0
 show-waitingicon|是否显示等待字样|boolean|-|false
 
-### td自定义元素 options
+### table-data options
+Key|说明|类型|可选值|默认值
+-|-|-|-|-
+tr_class|表格每行class|string|-|-
+tr_style|表格每行style|string|-|-
+
+#### td自定义元素 options
 Key|说明|类型|可选值|默认值
 -|-|-|-|-
 T_type|自定义html元素类型，如：input、select、img等|string|-|-

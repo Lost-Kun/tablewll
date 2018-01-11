@@ -447,7 +447,7 @@ var TableWll = {
     '<col v-for="(headerItem,index) in tableHeaders" :width="headerItem.width"/>' +
     '<col :width="hovereventOpenWidth" v-show="hovereventOpen"/>' +
     '<template v-if="!showWaitingicon">' +
-    '<tr v-for="(dataItem,index) in tableList" :class="[index%2===0?\'table-bodyTr--Dark\':\'table-bodyTr--Light\',dataItem[\'tr-class\']||\'\']" :style="dataItem[\'tr-style\']||\'\'" @mouseover="td_mouseOverEvent($event,index)" @mouseout="td_mouseOutEvent($event,index)" @click="trClickEvent($event,dataItem,tableList)">' +
+    '<tr v-for="(dataItem,index) in tableList" :class="[index%2===0?\'table-bodyTr--Dark\':\'table-bodyTr--Light\',dataItem[\'tr_class\']||\'\']" :style="dataItem[\'tr_style\']||\'\'" @mouseover="td_mouseOverEvent($event,index)" @mouseout="td_mouseOutEvent($event,index)" @click="trClickEvent($event,dataItem,tableList)">' +
     '<td v-show="showCheckbox" style="width: 50px;"><input type="checkbox" v-model="dataItem.TR_checked" @click.stop="singleSelectClick(index,$event)"></td>'+
     '<td-component v-for="(headerItem,index) in tableHeaders" :column-data="headerItem" :td-data="headerItem.hasOwnProperty(\'dataIndex\')?(dataItem.hasOwnProperty(headerItem.dataIndex)?dataItem[headerItem.dataIndex]:\'TB_undefined\'):\'TB_undefined\'" :tr-data="dataItem" :tb-data="tableList" :border-hide="hovereventOpen&&(index===tableHeaders.length-1)"></td-component>' +
     '<td v-show="hovereventOpen" style="border-left-width: 0px;">' +
